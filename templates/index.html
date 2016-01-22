@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+	<TITLE> VIT Clubs Portal </TITLE>
+	<LINK REL =Stylesheet TYPE ="text/css" HREF ="../static/index.css">
+</HEAD>
+<BODY background="../static/wall4.jpg">
+	<P CLASS="head-box font-head" align="center">VIT Clubs & Chapters </P>
+	<SPAN CLASS="login_box"><P><IMG SRC="../static/pin.png" CLASS="img-align"></P>
+	<P CLASS="font1">LOGIN</P>
+	{% if error %}<p class="error"><strong>Error:</strong> {{ error }}</p>{% endif %}
+	<SPAN><P CLASS="space1"><FORM CLASS="font2" action="{{ url_for('login') }}" method="post"><LABEL FOR="USRN">Username : </LABEL>
+	<INPUT ID="USRN" CLASS="form" TYPE = "Text" Name = "USERNAME" PLACEHOLDER="" REQUIRED>
+	</P></SPAN>
+	</SPAN>
+	<SPAN><P CLASS="space1"><LABEL FOR="PASSW">Password : </LABEL>
+	<INPUT ID="PASSW" CLASS="form1" TYPE = "Password" Name = "PASSWORD" PLACEHOLDER="" REQUIRED>
+	</P></SPAN>
+	</SPAN>
+	<P><SPAN><INPUT CLASS="button" TYPE = "Submit" VALUE="Forgot Password"></SPAN>
+	<SPAN><INPUT CLASS="button" TYPE = "Submit" VALUE="Login"></SPAN></FORM></P>
+	<SPAN><P CLASS="space1"><FORM CLASS="font2"><LABEL FOR="MAILID">Email ID : </LABEL>
+	<INPUT ID="MAILID" CLASS="form1" TYPE = "Text" Name = "MAILID" PLACEHOLDER="" REQUIRED>
+	</P></SPAN>
+	<P><SPAN><FORM><INPUT CLASS="button" TYPE = "Submit" VALUE="Send Request"></FORM></P></SPAN>
+	</SPAN>
+	<SPAN CLASS="sign_up_box"><P><IMG SRC="../static/pin.png" CLASS="img-align"></P>
+	<P CLASS="font1">SIGN UP</P>
+	<SPAN><P CLASS="space1"><FORM CLASS="font2"><LABEL FOR="CLUB">  Club : </LABEL>
+	<INPUT ID="CLUB" CLASS="form2" TYPE = "Text" Name = "CLUBN" PLACEHOLDER="" REQUIRED>
+	</P></SPAN>
+	</FORM></SPAN>
+	<SPAN><P CLASS="space1"><FORM CLASS="font2"><LABEL FOR="EMAIL">Email : </LABEL>
+	<INPUT ID="EMAIL" CLASS="form" TYPE = "Text" Name = "EMAIL" PLACEHOLDER="" REQUIRED>
+	</P></SPAN>
+	<P><SPAN><FORM><INPUT CLASS="button" TYPE = "Submit" VALUE="Verify"></FORM></P></SPAN>
+	<P CLASS="font3">Your request has been sent<BR>Verification is required for registration!
+	Please follow the steps given in the mail to complete your registration</BR></P>
+	</SPAN></P>
+</BODY>
+</HTML>
